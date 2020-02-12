@@ -1,0 +1,39 @@
+.call2a {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    width: 20rem;
+    height: 10rem;
+    cursor: pointer;
+    z-index: 3;
+    transition: all .3s ease-in-out;
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: var(--box-shadow-active);
+    border-radius: 30rem;
+
+    &:hover {
+        width: 30rem;
+        letter-spacing: 1.05rem;
+        border-radius: 1rem;
+    }
+
+    &::before {
+        content: '';
+
+    }
+}
+
+
+
+.heading-large {
+    font-family: 'Bungee Hairline', cursive;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-grey-dark);
+    margin-top: 1rem;
+}
+

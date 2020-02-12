@@ -1,0 +1,41 @@
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    padding: 2rem;
+
+    &__box {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        box-shadow: inset 0 .5rem 1rem rgba(179, 179, 179, 0.3);
+        margin: 3rem 2rem;
+        min-height: 25rem;
+        min-width: 25rem;
+        text-align: center;
+
+        &-icon {
+            width: 4rem;
+            height: 4rem;
+            fill: url(#about__svg-gradient) var(--color-primary);
+            margin: 2rem auto;
+        }
+
+        &-heading-small {
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            color: var(--color-grey-dark);
+        }
+
+        &-text {
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
+            color: var(--color-grey-light);
+        }
+    
+    }
+
+
+}

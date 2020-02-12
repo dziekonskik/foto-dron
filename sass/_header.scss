@@ -1,0 +1,116 @@
+.header {
+    // background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.16) 0px,
+    //                     rgba(255,255,255,0.16) 1px,transparent 1px, transparent 26px),
+    //                     repeating-linear-gradient(90deg, rgba(255,255,255,0.16) 0px,
+    //                     rgba(255,255,255,0.16) 1px,transparent 1px, transparent 26px),
+    //                     linear-gradient(90deg, hsl(213,95%,63%),hsl(213,95%,63%));
+    background-image: url(../img/main1_1920x10180.jpg);
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+    font-weight: 100;
+    
+
+    &__container {
+        display: grid;
+        grid-template-areas: "logo navi";
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        font-family: 'Monoton', cursive;
+        font-size: 3rem;
+        padding: .5rem;
+        margin: 1rem 2rem;
+        grid-area: 'logo';
+        display: inline-block;
+        color: white;
+        position: relative;
+        transition: all .4s;
+        
+    }
+
+    &__logo:hover {
+        transform: scale(1.1);
+        border: 1px solid white;
+        border-radius: 2rem;
+    }
+
+    &__logo-icon {
+        background-color: transparent;
+        position: absolute;
+        width: 70%;
+        height: 100%;
+        z-index: 100;
+        display: inline-block;
+        left: 11rem;
+        top: 0;
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        list-style: none;
+        grid-area: 'navi';
+    }
+
+    &__main-item {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+
+        &:last-child {
+            border: 1px solid white;
+            margin-right: 1rem;
+        }
+    }
+
+    &__main-link {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        padding: 1.5rem 3rem;
+        cursor: pointer;
+        transition: all .2s ease-in;
+    }
+
+    &__main-link:hover {
+        transform: scale(1.1) translateY(-3px);
+    }
+
+    &__main-link:active,
+    &__main-link:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: var(--box-shadow-active);
+        border-radius: 1rem;
+    }
+
+    &__heading-primary {
+        text-transform: lowercase;
+        font-size: 9rem;
+        color: white;
+        font-family: 'Bungee Hairline', cursive;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+    }
+
+    &__call2a-1 {
+        top: 50%;
+        left: 10%;
+        grid-area: 'btn1';
+    }
+
+    &__call2a-2 {
+        top: 70%;
+        left: 10%;
+        grid-area: 'btn2';
+    }
+
+    &__box {
+        widows: 30rem;
+        height: 30rem;
+    }
+
+}

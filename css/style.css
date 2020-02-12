@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+:root {
+  --color-primary: #10bcf8;
+  --color-secondary: #6736dd;
+  --color-tertiary: #36dd67;
+  --color-grey-light: #B0A8B9;
+  --color-grey-dark: #4B4453;
+  --border: 1px solid var(--color-primary);
+  --box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+  --box-shadow-active: 0 .25rem .5rem rgba(0,0,0, .2); }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6; }
+
+.header {
+  background-image: url(../img/main1_1920x10180.jpg);
+  background-size: cover;
+  height: 90vh;
+  position: relative;
+  font-weight: 100; }
+  .header__container {
+    display: grid;
+    grid-template-areas: "logo navi";
+    justify-content: space-between;
+    align-items: center; }
+  .header__logo {
+    font-family: 'Monoton', cursive;
+    font-size: 3rem;
+    padding: .5rem;
+    margin: 1rem 2rem;
+    grid-area: 'logo';
+    display: inline-block;
+    color: white;
+    position: relative;
+    transition: all .4s; }
+  .header__logo:hover {
+    transform: scale(1.1);
+    border: 1px solid white;
+    border-radius: 2rem; }
+  .header__logo-icon {
+    background-color: transparent;
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    z-index: 100;
+    display: inline-block;
+    left: 11rem;
+    top: 0; }
+  .header__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    grid-area: 'navi'; }
+  .header__main-item {
+    font-size: 1.2rem;
+    text-transform: uppercase; }
+    .header__main-item:last-child {
+      border: 1px solid white;
+      margin-right: 1rem; }
+  .header__main-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    transition: all .2s ease-in; }
+  .header__main-link:hover {
+    transform: scale(1.1) translateY(-3px); }
+  .header__main-link:active, .header__main-link:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: var(--box-shadow-active);
+    border-radius: 1rem; }
+  .header__heading-primary {
+    text-transform: lowercase;
+    font-size: 9rem;
+    color: white;
+    font-family: 'Bungee Hairline', cursive;
+    position: absolute;
+    top: 20%;
+    left: 10%; }
+  .header__call2a-1 {
+    top: 50%;
+    left: 10%;
+    grid-area: 'btn1'; }
+  .header__call2a-2 {
+    top: 70%;
+    left: 10%;
+    grid-area: 'btn2'; }
+  .header__box {
+    widows: 30rem;
+    height: 30rem; }
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  padding: 2rem; }
+  .about__box {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-shadow: inset 0 0.5rem 1rem rgba(179, 179, 179, 0.3);
+    margin: 3rem 2rem;
+    min-height: 25rem;
+    min-width: 25rem;
+    text-align: center; }
+    .about__box-icon {
+      width: 4rem;
+      height: 4rem;
+      fill: url(#about__svg-gradient) var(--color-primary);
+      margin: 2rem auto; }
+    .about__box-heading-small {
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: var(--color-grey-dark); }
+    .about__box-text {
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+      color: var(--color-grey-light); }
+
+.call2a {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  width: 20rem;
+  height: 10rem;
+  cursor: pointer;
+  z-index: 3;
+  transition: all .3s ease-in-out;
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: var(--box-shadow-active);
+  border-radius: 30rem; }
+  .call2a:hover {
+    width: 30rem;
+    letter-spacing: 1.05rem;
+    border-radius: 1rem; }
+  .call2a::before {
+    content: ''; }
+
+.heading-large {
+  font-family: 'Bungee Hairline', cursive;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-grey-dark);
+  margin-top: 1rem; }
