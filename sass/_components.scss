@@ -2,7 +2,7 @@
     border: 1px solid white;
     background-color: transparent;
     color: white;
-    position: absolute;
+    position: relative;
     width: 20rem;
     height: 10rem;
     cursor: pointer;
@@ -10,7 +10,7 @@
     transition: all .3s ease-in-out;
     outline: none;
     transform: translateY(-1px);
-    box-shadow: var(--box-shadow-active);
+    box-shadow: var(--bs-neumorphic-up);
     border-radius: 30rem;
 
     &:hover {
@@ -21,6 +21,12 @@
 
     &::before {
         content: '';
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
 
     }
 }
@@ -31,9 +37,34 @@
     font-family: 'Bungee Hairline', cursive;
     font-size: 4rem;
     text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
+    box-shadow: var(--bs-neumorphic-up);
     color: var(--color-grey-dark);
     margin-top: 1rem;
 }
 
+
+.back-col {
+    display: block;
+    background-image: var(--linear-gradient);
+    position: relative;
+    color: white;
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    opacity: .6;
+    transition: all .4s;
+
+    &::after {
+        content: '';
+        background-color: var(--color-tertiary);
+        display: inline-block;
+        height: 10%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 300;
+        transition: all .4s;
+    }
+}
