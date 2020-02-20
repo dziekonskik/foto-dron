@@ -2,7 +2,7 @@
     border: 1px solid white;
     background-color: transparent;
     color: white;
-    position: relative;
+    position: absolute;
     width: 20rem;
     height: 10rem;
     cursor: pointer;
@@ -30,8 +30,6 @@
 
     }
 }
-
-
 
 .heading-large {
     font-family: 'Bungee Hairline', cursive;

@@ -68,7 +68,7 @@ body {
     top: 0; }
   .header__main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     list-style: none;
     grid-area: 'navi'; }
   .header__main-item {
@@ -100,11 +100,11 @@ body {
     top: 20%;
     left: 10%; }
   .header__call2a-1 {
-    top: 30%;
+    top: 50%;
     left: 10%;
     grid-area: 'btn1'; }
   .header__call2a-2 {
-    top: 40%;
+    top: 70%;
     left: 10%;
     grid-area: 'btn2'; }
   .header__box {
@@ -113,8 +113,9 @@ body {
 
 .about {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  padding: 2rem; }
+  grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+  padding: 4rem;
+  margin: 4rem 0; }
   .about__box {
     display: grid;
     grid-template-columns: 1fr;
@@ -146,7 +147,7 @@ body {
   border: 1px solid white;
   background-color: transparent;
   color: white;
-  position: relative;
+  position: absolute;
   width: 20rem;
   height: 10rem;
   cursor: pointer;
@@ -201,6 +202,31 @@ body {
     transition: all .4s; }
 
 .slider {
-  min-height: 70vh;
-  width: 70%;
-  display: grid; }
+  box-shadow: var(--bs-neumorphic-up);
+  position: relative;
+  margin: 4rem 0;
+  padding: 4rem 0; }
+  .slider__container {
+    min-height: 70vh;
+    width: 90%;
+    position: relative;
+    background-image: url(../slider/DJI_1.jpg);
+    background-size: cover;
+    background-position: center center;
+    margin: 3rem auto; }
+  .slider__call2a {
+    position: static; }
+  .slider__btn {
+    display: inline-block;
+    font-size: 3rem;
+    width: 5%;
+    height: 100%;
+    outline: none;
+    border: none; }
+  .slider__prevButton {
+    position: absolute;
+    left: 0;
+    box-shadow: 16px 16px 30px rgba(0, 0, 0, 0.1); }
+  .slider__nextButton {
+    position: absolute;
+    right: 0; }

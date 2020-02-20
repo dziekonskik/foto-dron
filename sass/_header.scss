@@ -50,7 +50,7 @@
 
     &__main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
         list-style: none;
         grid-area: 'navi';
     }
@@ -97,13 +97,13 @@
     }
 
     &__call2a-1 {
-        top: 30%;
+        top: 50%;
         left: 10%;
         grid-area: 'btn1';
     }
 
     &__call2a-2 {
-        top: 40%;
+        top: 70%;
         left: 10%;
         grid-area: 'btn2';
     }

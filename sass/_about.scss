@@ -1,7 +1,8 @@
 .about {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+    padding: 4rem;
+    margin: 4rem 0;
 
     &__box {
         display: grid;

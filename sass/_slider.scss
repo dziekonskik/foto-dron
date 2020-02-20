@@ -1,5 +1,46 @@
-.slider {
-    min-height: 70vh;
-    width: 70%;
-    display: grid;
+.slider {    
+    box-shadow: var(--bs-neumorphic-up);
+    position: relative;
+    margin: 4rem 0;
+    padding: 4rem 0;
+
+    &__container {
+        min-height: 70vh;
+        width: 90%;
+        position: relative;
+        background-image: url(../slider/DJI_1.jpg);
+        background-size: cover;
+        background-position: center center;
+        margin: 3rem auto;
+    }
+
+    &__call2a {
+        position: static;
+
+
+    }
+
+    &__btn {
+        display: inline-block;
+        font-size: 3rem;
+        width: 5%;
+        height: 100%;
+        outline: none;
+        border: none;
+    }
+
+
+
+    &__prevButton {
+        position: absolute;
+        left: 0;
+        box-shadow: 16px 16px 30px rgba(0, 0, 0, .1),
+        ;
+    }
+
+    &__nextButton {
+        position: absolute;
+        right: 0;
+
+    }
 }
