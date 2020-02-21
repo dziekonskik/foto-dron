@@ -36,6 +36,7 @@ body {
   background-image: url(../img/main1_1920x10180.jpg);
   background-size: cover;
   height: 90vh;
+  clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
   position: relative;
   font-weight: 100; }
   .header__container {
@@ -222,7 +223,8 @@ body {
     width: 5%;
     height: 100%;
     outline: none;
-    border: none; }
+    border: none;
+    opacity: .3; }
   .slider__prevButton {
     position: absolute;
     left: 0;

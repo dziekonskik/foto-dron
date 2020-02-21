@@ -1,12 +1,8 @@
 .header {
-    // background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.16) 0px,
-    //                     rgba(255,255,255,0.16) 1px,transparent 1px, transparent 26px),
-    //                     repeating-linear-gradient(90deg, rgba(255,255,255,0.16) 0px,
-    //                     rgba(255,255,255,0.16) 1px,transparent 1px, transparent 26px),
-    //                     linear-gradient(90deg, hsl(213,95%,63%),hsl(213,95%,63%));
     background-image: url(../img/main1_1920x10180.jpg);
     background-size: cover;
     height: 90vh;
+    clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
     position: relative;
     font-weight: 100;
     
