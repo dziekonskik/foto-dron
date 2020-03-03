@@ -15,13 +15,20 @@
     }
 
     &__call2a {
-        position: static;
-
-
+        position: absolute;
+        display: inline-block;
+        bottom: 0px;
+        left: 50%;
+        transition: all .3s ease-in;
+    }
+    &__call2a:hover {
+        color: var(--color-primary);
+        border: 1px solid var(--color-primary);
     }
 
     &__btn {
         display: inline-block;
+        position: absolute;
         font-size: 3rem;
         width: 5%;
         height: 100%;
@@ -33,14 +40,11 @@
 
 
     &__prevButton {
-        position: absolute;
         left: 0;
-        box-shadow: 16px 16px 30px rgba(0, 0, 0, .1),
-        ;
+        box-shadow: 16px 16px 30px rgba(0, 0, 0, .7);
     }
 
     &__nextButton {
-        position: absolute;
         right: 0;
 
     }
