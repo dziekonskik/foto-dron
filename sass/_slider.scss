@@ -24,6 +24,9 @@
     &__call2a:hover {
         color: var(--color-primary);
         border: 1px solid var(--color-primary);
+        font-size: 1.7rem;
+        font-weight: bold;
+        box-shadow: .4rem .4rem .3rem;
     }
 
     &__btn {
@@ -37,15 +40,18 @@
         opacity: .3;
     }
 
-
+    &__btn:active,
+    &__btn:focus {
+        box-shadow: .8rem .8rem 1.5rem #ffffff;
+    }
 
     &__prevButton {
         left: 0;
-        box-shadow: 16px 16px 30px rgba(0, 0, 0, .7);
+        box-shadow: -16px -16px 30px rgba(0, 0, 0, .7);
     }
 
     &__nextButton {
         right: 0;
-
+        box-shadow: 16px 16px 30px rgba(0, 0, 0, .7);
     }
 }
