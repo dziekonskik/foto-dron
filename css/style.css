@@ -105,7 +105,8 @@ body {
     font-family: 'Bungee Hairline', cursive;
     position: absolute;
     top: 20%;
-    left: 10%; }
+    left: 10%;
+    animation: animated-heading-primary 1s linear forwards; }
   .header__call2a-1 {
     top: 50%;
     left: 10%;
@@ -313,6 +314,16 @@ body {
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%); } }
 
+@keyframes animated-heading-primary {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: .3; }
+  80% {
+    opacity: .8; }
+  100% {
+    opacity: 1; } }
+
 .works__container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -320,21 +331,71 @@ body {
 
 .works__list {
   display: grid;
-  grid-area: 'ul';
   justify-content: center;
   align-items: center;
-  margin-right: 40%; }
+  perspective: 100rem;
+  transform: translateX(-10rem); }
   .works__list-item {
-    display: block;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
     font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--color-background);
+    font-family: inherit;
     padding: 2rem 1rem;
     margin: 2rem 1rem;
-    list-style: none; }
+    border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+    list-style: none;
+    cursor: pointer;
+    transform: rotateY(-30deg) rotateX(15deg);
+    position: absolute;
+    opacity: .7;
+    transition: all .3s ease-in;
+    mix-blend-mode: hue; }
+    .works__list-item-img {
+      width: 50%;
+      opacity: .7;
+      justify-self: end; }
+    .works__list-item-span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold; }
+  .works__list-item:hover {
+    transform: rotateY(-10deg) rotateX(-7deg) scale(1.07);
+    z-index: 100;
+    mix-blend-mode: normal;
+    opacity: .9;
+    border-radius: 1rem;
+    font-size: 1.7rem; }
+    .works__list-item:hover-img {
+      width: 60%; }
+  .works__list-item:nth-child(1) {
+    top: 0;
+    background-color: var(--color-tertiary); }
+  .works__list-item:nth-child(2) {
+    top: 15%;
+    background-color: var(--color-primary); }
+  .works__list-item:nth-child(3) {
+    top: 30%;
+    background-color: var(--color-secondary); }
+  .works__list-item:nth-child(4) {
+    top: 45%;
+    background-color: var(--color-tertiary); }
+  .works__list-item:nth-child(5) {
+    top: 60%;
+    background-color: var(--color-primary); }
+  .works__list-item:nth-child(6) {
+    top: 75%;
+    background-color: var(--color-secondary); }
 
 .works__samples {
-  display: block; }
+  display: inline-flex;
+  transform: rotate3d(1, 0, 0, 60deg); }
   .works__samples-img {
     display: block;
     height: 34rem;
     width: 60rem;
-    margin: 2rem; }
+    margin: 4rem;
+    padding: 4rem;
+    box-shadow: var(--bs-neumorphic-up); }

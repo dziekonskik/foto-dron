@@ -1,33 +1,103 @@
 .works {
     &__container {
+       // min-height: 70vh;
         display: grid;
         grid-template-columns: 2fr 1fr ;
         position: relative;
     }
     &__list {
         display: grid;
-        grid-area: 'ul';
         justify-content: center;
         align-items: center;
-        margin-right: 40%;
+        perspective: 100rem;
+        transform: translateX(-10rem);
 
         &-item {
-            display: block;
+            display: grid;
+            grid-template-columns: 2fr 5fr;
             font-size: 1.4rem;
+            text-transform: uppercase;
+            color: var(--color-background);
+            font-family: inherit;
             padding: 2rem 1rem;
             margin: 2rem 1rem;
+            border-bottom: 4px solid rgba(0,0,0,.2);
             list-style: none;
+            cursor: pointer;
+            transform: rotateY(-30deg) rotateX(15deg);
+            position: absolute;
+            opacity: .7;
+            transition: all .3s ease-in;
+            mix-blend-mode: hue;
+
+            &-img {
+                width: 50%; 
+                opacity: .7;     
+                justify-self: end;      
+            }
+
+            &-span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+            }
+        }
+
+        &-item:hover {
+            transform: rotateY(-10deg) rotateX(-7deg) scale(1.07);
+            z-index: 100;
+            mix-blend-mode: normal;
+            opacity: .9;
+            border-radius: 1rem;
+            font-size: 1.7rem;
+
+            &-img {
+                width: 60%;
+            }
+        }
+
+        &-item:nth-child(1) {
+            top: 0;
+            background-color: var(--color-tertiary);
+        }
+
+        &-item:nth-child(2) {
+            top: 15%;
+            background-color: var(--color-primary);
+        }
+
+        &-item:nth-child(3) {
+            top: 30%;
+            background-color: var(--color-secondary);
+        }
+
+        &-item:nth-child(4) {
+            top: 45%;
+            background-color: var(--color-tertiary);
+        }
+
+        &-item:nth-child(5) {
+            top: 60%;
+            background-color: var(--color-primary);
+        }
+
+        &-item:nth-child(6) {
+            top: 75%;
+            background-color: var(--color-secondary);
         }
     }
     &__samples {
-        display: block;
-
+        display: inline-flex;
+        transform: rotate3d(1, 0, 0, 60deg);
 
         &-img {
             display: block;
             height: 34rem;
             width: 60rem;
-            margin: 2rem;
+            margin: 4rem;
+            padding: 4rem;
+            box-shadow: var(--bs-neumorphic-up);
         }
     }
 }

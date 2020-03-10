@@ -1,3 +1,5 @@
+// -----=======ANIMATED MENU CONTACT BUTTON=======-----
+
 @keyframes btn-animated-top {
     0% {
         -webkit-transform: translateX(100%);
@@ -39,5 +41,22 @@
     100% {
         -webkit-transform: translateY(-100%);
         transform: translateY(-100%);
+    }
+}
+
+// -----=======ANIMATED SKY IS THE LIMIT=======-----
+
+@keyframes animated-heading-primary {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: .3;
+    }
+    80% {
+        opacity: .8;
+    }
+    100% {
+        opacity: 1;
     }
 }
