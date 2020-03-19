@@ -30,7 +30,7 @@
 
     }
 }
-
+// -----=======BTN ANIMATED=======-----
 .btn-animated {
     position: relative;
     overflow: hidden;
@@ -73,7 +73,7 @@
         animation: 2s -1s btn-animated-right linear infinite;
     }
 }
-
+// -----=======HEADING=======-----
 .heading-large {
     font-family: 'Bungee Hairline', cursive;
     font-size: 4rem;
@@ -82,8 +82,7 @@
     color: var(--color-grey-dark);
     margin-top: 1rem;
 }
-
-
+// -----=======BACKGROUND COLOR=======-----
 .back-col {
     display: block;
     background-image: var(--linear-gradient);
@@ -107,3 +106,4 @@
         left: 0;
     }
 }
+// -----=======ANIMATED SKY IS THE LIMIT=======-----

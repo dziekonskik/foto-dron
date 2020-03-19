@@ -23,8 +23,8 @@
                 <ul class="header__main">
                     <li class="header__main-item"><a class="header__main-link" href="#about">O Firmie</a></li>
                     <li class="header__main-item"><a class="header__main-link" href="#slider">Galeria</a></li>
-                    <li class="header__main-item"><a class="header__main-link" href="#">Usługi</a></li>
-                    <li class="header__main-item"><a class="header__main-link btn-animated" href="#"> 
+                    <li class="header__main-item"><a class="header__main-link" href="#uslugi">Usługi</a></li>
+                    <li class="header__main-item"><a class="header__main-link btn-animated" href="#formularz"> 
                         <span class="btn-animated__span"></span>
                         <span class="btn-animated__span"></span>
                         <span class="btn-animated__span"></span>
@@ -117,7 +117,7 @@
                 <!-- <button class="call2a slider__call2a">Zobacz całą galerię</button> -->
             </div> 
         </section>
-        <section class="works">
+        <section class="works" id="uslugi">
             <h2 class="heading-large">Zakres Prac</h2>
             <div class="works__container">
                 <div class="works__samples">
@@ -151,12 +151,26 @@
                 </ul>
             </div>
         </section>
-        <section class="contact-form">
+        <section class="contact-form" id='formularz'>
             <h2 class="heading-large">Formularz kontaktowy</h2>
-            Contact form
+            <form action="" class="form">
+            <div class="form__group">
+                <input type="text" class="form__input" id="name" placeholder="Imie">
+                <label for="name" class="form__label">Imię</label>
+            </div>
+            <div class="form__group">
+                <input type="email" class="form__input" id="mail" placeholder="Email">
+                <label for="mail" class="form__label">Imię</label>
+            </div>
+            <div class="form__group">
+                <input type="phone" class="form__input" id="phone" placeholder="Tel">
+                <label for="phone" class="form__label">Email</label>
+            </div>
+            <textarea class="form__textarea"name="" cols="30" rows="10" required></textarea>
+            <button class="form__button">Wyślij !</button>
+            </form>
         </section>
     </main>
-<!-- TODO: formularz kontaktowy -->
     <footer class="main-footer">
         <address>
             Adrian Kubiak<br>

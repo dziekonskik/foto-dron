@@ -15,7 +15,7 @@
   --border: 1px solid var(--color-primary);
   --box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
   --box-shadow-active: 0 .25rem .5rem rgba(0,0,0, .2);
-  --bs-neumorphic-up: 1.6rem 1.6rem 3rem #ffffff,
+  --bs-neumorphic-up: 1.6rem 1.6rem 3rem #fff,
                         -1.6rem -1.6rem 3rem rgba(0, 0, 0, .1); }
 
 *,
@@ -25,7 +25,10 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -399,3 +402,62 @@ body {
     margin: 4rem;
     padding: 4rem;
     box-shadow: var(--bs-neumorphic-up); }
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; }
+  .contact-form .heading-large {
+    grid-column: 1 / -1;
+    height: 6rem; }
+  .contact-form .form {
+    grid-column: 2 / 3;
+    padding: 4rem;
+    margin: 4rem auto; }
+    .contact-form .form__group {
+      margin: 1rem auto; }
+    .contact-form .form__input, .contact-form .form__textarea, .contact-form .form__button {
+      outline: none;
+      font-family: inherit;
+      font-size: 1.6rem;
+      color: var(--color-grey-dark); }
+    .contact-form .form__input {
+      border: none;
+      border-bottom: 3px solid transparent;
+      padding: 1rem 2rem;
+      height: 100%;
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px white; }
+    .contact-form .form__input:focus {
+      border-bottom: 3px solid rgba(103, 54, 221, 0.3); }
+    .contact-form .form__input:focus, .contact-form .form__textarea:focus {
+      box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px white; }
+    .contact-form .form__label {
+      color: var(--color-grey-dark);
+      text-shadow: 1px 1px 0 white; }
+    .contact-form .form__textarea {
+      line-height: 1.5;
+      resize: none;
+      border: none;
+      border-radius: 1rem;
+      width: 100%;
+      margin: 1rem auto;
+      padding: 2rem;
+      box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff; }
+    .contact-form .form__button {
+      display: inline-block;
+      width: 100%;
+      color: var(--color-secondary);
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+      border: none;
+      border-radius: 1rem;
+      box-shadow: -5px -5px 20px white, 5px 5px 20px #BABECC;
+      transition: all 0.2s linear;
+      cursor: pointer; }
+      .contact-form .form__button:hover, .contact-form .form__button:focus {
+        box-shadow: -2px -2px 5px white, 2px 2px 5px #BABECC; }
+      .contact-form .form__button:active {
+        box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px white; }
