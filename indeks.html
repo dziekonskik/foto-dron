@@ -151,24 +151,45 @@
                 </ul>
             </div>
         </section>
-        <section class="contact-form" id='formularz'>
+        <section class="contact" id='formularz'>
             <h2 class="heading-large">Formularz kontaktowy</h2>
-            <form action="" class="form">
-            <div class="form__group">
-                <input type="text" class="form__input" id="name" placeholder="Imie">
-                <label for="name" class="form__label">Imię</label>
+            <div class="contact__wrap">
+                <form action="#" class="form" autocomplete="off">
+                    <div class="form__group">
+                        <input type="text" class="form__input" id="name" placeholder="Imie">
+                        <label for="name" class="form__label">Imie</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" class="form__input" id="mail" placeholder="Email">
+                        <label for="mail" class="form__label">Email</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" class="form__input" id="phone" placeholder="Tel">
+                        <label for="phone" class="form__label">Tel</label>
+                    </div>
+                    <textarea class="form__textarea"name="" cols="30" rows="10" required></textarea>
+                    <button class="form__button">Wyślij !</button>
+                </form>
+                <div class="social-media">
+                    <div class="social-media__window">
+                        <a href="" class="social-media__link social-media__link-facebook">
+                            <svg class="social-media__link-icon">
+                                <use xlink:href="img/svg/symbol-defs.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="social-media__link social-media__link-messenger">
+                            <svg class="social-media__link-icon">
+                                <use xlink:href="img/svg/symbol-defs.svg#icon-messenger"></use>
+                            </svg>
+                        </a>
+                        <a href="" class="social-media__link social-media__link-instagram">
+                            <svg class="social-media__link-icon">
+                                <use xlink:href="img/svg/symbol-defs.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="form__group">
-                <input type="email" class="form__input" id="mail" placeholder="Email">
-                <label for="mail" class="form__label">Imię</label>
-            </div>
-            <div class="form__group">
-                <input type="phone" class="form__input" id="phone" placeholder="Tel">
-                <label for="phone" class="form__label">Email</label>
-            </div>
-            <textarea class="form__textarea"name="" cols="30" rows="10" required></textarea>
-            <button class="form__button">Wyślij !</button>
-            </form>
         </section>
     </main>
     <footer class="main-footer">

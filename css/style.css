@@ -403,61 +403,114 @@ body {
     padding: 4rem;
     box-shadow: var(--bs-neumorphic-up); }
 
-.contact-form {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr; }
-  .contact-form .heading-large {
+.contact {
+  display: grid; }
+  .contact .heading-large {
     grid-column: 1 / -1;
     height: 6rem; }
-  .contact-form .form {
-    grid-column: 2 / 3;
-    padding: 4rem;
-    margin: 4rem auto; }
-    .contact-form .form__group {
-      margin: 1rem auto; }
-    .contact-form .form__input, .contact-form .form__textarea, .contact-form .form__button {
-      outline: none;
-      font-family: inherit;
-      font-size: 1.6rem;
-      color: var(--color-grey-dark); }
-    .contact-form .form__input {
-      border: none;
-      border-bottom: 3px solid transparent;
-      padding: 1rem 2rem;
-      height: 100%;
-      width: 100%;
-      border-radius: 1rem;
-      box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px white; }
-    .contact-form .form__input:focus {
-      border-bottom: 3px solid rgba(103, 54, 221, 0.3); }
-    .contact-form .form__input:focus, .contact-form .form__textarea:focus {
-      box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px white; }
-    .contact-form .form__label {
-      color: var(--color-grey-dark);
-      text-shadow: 1px 1px 0 white; }
-    .contact-form .form__textarea {
-      line-height: 1.5;
-      resize: none;
-      border: none;
-      border-radius: 1rem;
-      width: 100%;
-      margin: 1rem auto;
-      padding: 2rem;
-      box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff; }
-    .contact-form .form__button {
-      display: inline-block;
-      width: 100%;
-      color: var(--color-secondary);
-      font-weight: bold;
-      text-transform: uppercase;
-      padding: 1rem 2rem;
-      margin-top: 1rem;
-      border: none;
-      border-radius: 1rem;
-      box-shadow: -5px -5px 20px white, 5px 5px 20px #BABECC;
-      transition: all 0.2s linear;
-      cursor: pointer; }
-      .contact-form .form__button:hover, .contact-form .form__button:focus {
-        box-shadow: -2px -2px 5px white, 2px 2px 5px #BABECC; }
-      .contact-form .form__button:active {
+  .contact__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+    background-image: linear-gradient(105deg, transparent 0%, transparent 50%, rgba(16, 188, 248, 0.3) 50%); }
+    .contact__wrap .form {
+      grid-column: 1 / 2;
+      padding: 4rem;
+      margin: 4rem auto;
+      width: 80%; }
+      .contact__wrap .form__group {
+        margin: 1rem auto; }
+      .contact__wrap .form__input, .contact__wrap .form__textarea, .contact__wrap .form__button {
+        outline: none;
+        font-family: inherit;
+        font-size: 1.6rem;
+        color: var(--color-grey-dark); }
+      .contact__wrap .form__input {
+        border: none;
+        border-bottom: 3px solid transparent;
+        padding: 1rem 2rem;
+        height: 100%;
+        width: 100%;
+        display: block;
+        border-radius: 1rem;
+        box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px white; }
+        .contact__wrap .form__input:focus {
+          border-bottom: 3px solid rgba(103, 54, 221, 0.3); }
+        .contact__wrap .form__input:focus:invalid {
+          border-bottom: 3px solid tomato; }
+      .contact__wrap .form__input:focus, .contact__wrap .form__textarea:focus {
         box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px white; }
+      .contact__wrap .form__label {
+        color: var(--color-grey-dark);
+        display: block;
+        text-shadow: 2px 2px 6px white;
+        margin-left: 2rem;
+        font-size: 1.3rem;
+        transition: all .3s linear; }
+      .contact__wrap .form__input + .contact__wrap .form__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem); }
+      .contact__wrap .form__textarea {
+        line-height: 1.5;
+        resize: none;
+        border: none;
+        border-radius: 1rem;
+        width: 100%;
+        margin: 1rem auto;
+        padding: 2rem;
+        box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff; }
+      .contact__wrap .form__button {
+        display: inline-block;
+        width: 100%;
+        color: var(--color-secondary);
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        border: none;
+        border-radius: 1rem;
+        box-shadow: -5px -5px 20px white, 5px 5px 20px #BABECC;
+        transition: all 0.2s linear;
+        cursor: pointer; }
+        .contact__wrap .form__button:hover, .contact__wrap .form__button:focus {
+          box-shadow: -2px -2px 5px white, 2px 2px 5px #BABECC; }
+        .contact__wrap .form__button:active {
+          box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px white; }
+    .contact__wrap .social-media {
+      grid-column: 2 / -1;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      transition: all 1s linear; }
+      .contact__wrap .social-media__window {
+        width: 20rem;
+        height: 40rem;
+        box-shadow: var(--bs-neumorphic-up);
+        border-radius: 1rem;
+        display: grid;
+        justify-content: center;
+        align-content: center; }
+      .contact__wrap .social-media__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 6rem;
+        text-decoration: none;
+        border-radius: 1rem;
+        padding: 1rem 1.5rem;
+        margin: 1rem;
+        border-radius: 50%;
+        color: var(--color-grey-dark);
+        box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1), -3px -3px 3px 3px rgba(247, 251, 255, 0.5); }
+        .contact__wrap .social-media__link:hover {
+          box-shadow: inset 3px 3px 6px 3px rgba(0, 0, 0, 0.1), inset -3px -3px 3px 3px rgba(247, 251, 255, 0.5);
+          transition: all .4s linear; }
+        .contact__wrap .social-media__link-icon {
+          width: 6rem;
+          height: 6rem; }
+
+.main-footer {
+  display: grid; }
