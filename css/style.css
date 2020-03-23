@@ -447,7 +447,8 @@ body {
         text-shadow: 2px 2px 6px white;
         margin-left: 2rem;
         font-size: 1.3rem;
-        transition: all .3s linear; }
+        transition: all .2s linear;
+        opacity: 0; }
       .contact__wrap .form__input + .contact__wrap .form__label {
         opacity: 0;
         visibility: hidden;
@@ -506,11 +507,37 @@ body {
         color: var(--color-grey-dark);
         box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1), -3px -3px 3px 3px rgba(247, 251, 255, 0.5); }
         .contact__wrap .social-media__link:hover {
-          box-shadow: inset 3px 3px 6px 3px rgba(0, 0, 0, 0.1), inset -3px -3px 3px 3px rgba(247, 251, 255, 0.5);
-          transition: all .4s linear; }
+          box-shadow: inset 3px 3px 6px 3px rgba(0, 0, 0, 0.1), inset -3px -3px 6px 3px rgba(247, 251, 255, 0.5);
+          transform: scale(1.1);
+          transition: all .2s linear; }
+        .contact__wrap .social-media__link:active {
+          box-shadow: inset 2px 2px 3px 1px rgba(0, 0, 0, 0.1), inset -2px -2px 2px 2px rgba(247, 251, 255, 0.5);
+          transition: all .2s linear; }
         .contact__wrap .social-media__link-icon {
           width: 6rem;
           height: 6rem; }
 
-.main-footer {
-  display: grid; }
+.footer {
+  display: grid;
+  box-shadow: -5px -5px 20px white, 5px 5px 20px #BABECC; }
+  .footer__address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-grey-lightfgfc);
+    font-weight: bold;
+    line-height: 2; }
+  .footer__copyrights {
+    display: inline-block;
+    padding: .7rem;
+    box-shadow: -3px -3px 16px white, 3px 3px 16px #BABECC;
+    text-decoration: none;
+    color: grey;
+    text-align: center; }
+    .footer__copyrights-mail {
+      color: grey;
+      display: inline-block;
+      padding: .7rem;
+      box-shadow: -3px -3px 16px white, 3px 3px 16px #BABECC;
+      text-decoration: none; }

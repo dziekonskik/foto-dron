@@ -1,3 +1,36 @@
-.main-footer {
+.footer {
     display: grid;
+    box-shadow: -5px -5px 20px white,
+    5px 5px 20px #BABECC;
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-grey-lightfgfc);
+        font-weight: bold;
+        line-height: 2;
+        // box-shadow: -5px -5px 20px white,
+        // 5px 5px 20px #BABECC;
+    }
+
+    &__copyrights {
+        display: inline-block;
+        padding: .7rem;
+        box-shadow: -3px -3px 16px white,
+                     3px 3px 16px #BABECC;
+        text-decoration: none;
+        color: grey;
+        text-align: center;
+
+        &-mail {
+            color: grey;
+            display: inline-block;
+            padding: .7rem;
+            box-shadow: -3px -3px 16px white,
+                         3px 3px 16px #BABECC;
+            text-decoration: none;
+        }
+    }
 }

@@ -63,7 +63,8 @@
             text-shadow: 2px 2px 6px white;
             margin-left: 2rem;
             font-size: 1.3rem;
-            transition: all .3s linear;
+            transition: all .2s linear;
+            opacity: 0;
         }
 
         &__input + &__label {
@@ -148,8 +149,16 @@
                 &:hover {
                     box-shadow:
                 inset 3px 3px 6px 3px rgba(0, 0, 0, 0.1),
-                inset -3px -3px 3px 3px rgba(247, 251, 255, 0.5);
-                transition: all .4s linear;
+                inset -3px -3px 6px 3px rgba(247, 251, 255, 0.5);
+                transform: scale(1.1);
+                transition: all .2s linear;
+                }
+
+                &:active {
+                    box-shadow:
+                inset 2px 2px 3px 1px rgba(0, 0, 0, 0.1),
+                inset -2px -2px 2px 2px rgba(247, 251, 255, 0.5);
+                transition: all .2s linear;
                 }
 
                 &-icon {
