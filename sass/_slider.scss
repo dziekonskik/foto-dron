@@ -1,57 +1,55 @@
 .slider {    
     box-shadow: var(--bs-neumorphic-up);
-    position: relative;
-    margin: 4rem 0;
+    margin: 4rem auto;
     padding: 4rem 0;
+    min-height: 70vh;
+    
 
     &__container {
-        min-height: 70vh;
-        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
         position: relative;
+    }
+
+    &__screen {
+        width: 70%;
+        height: 50rem;
         background-image: url(../slider/DJI_1.jpg);
         background-size: cover;
         background-position: center center;
         margin: 3rem auto;
-    }
-
-    &__call2a {
-        position: absolute;
-        display: inline-block;
-        bottom: 0px;
-        left: 50%;
-        transition: all .3s ease-in;
-    }
-    &__call2a:hover {
-        color: var(--color-primary);
-        border: 1px solid var(--color-primary);
-        font-size: 1.7rem;
-        font-weight: bold;
-        box-shadow: .4rem .4rem .3rem;
+        border-radius: 1rem;
     }
 
     &__btn {
         display: inline-block;
         position: absolute;
         font-size: 3rem;
-        width: 5%;
-        height: 100%;
+        width: 10%;
+        height: 10rem;
         outline: none;
         border: none;
+        border-radius: 1rem;
         opacity: .3;
+        transform: translateY(-50%);
     }
 
-    &__btn:active,
-    &__btn:focus {
+    &__btn:active {
         box-shadow: .8rem .8rem 1.5rem #ffffff;
     }
 
     &__prevButton {
-        left: 0;
+        top: 50%;
+        left: 4%;
         box-shadow: -16px -16px 30px rgba(0, 0, 0, .7);
     }
 
     &__nextButton {
-        right: 0;
+        top: 50%;
+        right: 4%;
         box-shadow: 16px 16px 30px rgba(0, 0, 0, .7);
     }
 }

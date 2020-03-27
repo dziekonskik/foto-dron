@@ -1,6 +1,6 @@
 .works {
     &__container {
-       // min-height: 70vh;
+        min-height: 70vh;
         display: grid;
         grid-template-columns: 2fr 1fr ;
         position: relative;
@@ -30,6 +30,7 @@
             transition: all .3s ease-in;
             mix-blend-mode: hue;
 
+
             &-img {
                 width: 50%; 
                 opacity: .7;     
@@ -55,6 +56,10 @@
             &-img {
                 width: 60%;
             }
+        }
+        &-item:focus,
+        &-item:active {
+            transform: translateX(-7rem);
         }
 
         &-item:nth-child(1) {
@@ -88,16 +93,22 @@
         }
     }
     &__samples {
-        display: inline-flex;
-        transform: rotate3d(1, 0, 0, 60deg);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 1.7rem;
+        padding: 3rem;
+        width: 0;
+        height: 0;
+        z-index: -4;
+        border-radius: 1rem;
 
         &-img {
             display: block;
+            width: 40rem;
             height: 34rem;
-            width: 60rem;
             margin: 4rem;
             padding: 4rem;
-            box-shadow: var(--bs-neumorphic-up);
+
         }
     }
 }

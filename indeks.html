@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Monoton|Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline&display=swap" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <title>Foto-Dron</title>
 </head>
 <body>
@@ -34,13 +35,13 @@
                 </ul>
             </nav>
             <p class="header__heading-primary">Sky is the limit!</p>
-            <button class="call2a header__call2a-1" href="#">Napisz do mnie!</button>
-            <button class="call2a header__call2a-2" href="#">Zobacz Galerię</button>
+            <button class="call2a call2a-1" href="#">Napisz do mnie!</button>
+            <button class="call2a call2a-2" href="#">Zobacz Galerię</button>
     </header>
     <main class="main">
         <h2 class="heading-large">O firmie</h2>
-        <section class="about" id="about">
-                <div class="about__box">
+        <section class="about" id="about" >
+                <div class="about__box" data-aos="fade-right">
                     <svg class="about__box-icon">
                         <use xlink:href="img/svg/sprite.svg#icon-heart"></use>
                     </svg>
@@ -50,7 +51,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, est?
                     </p>
                 </div>
-                <div class="about__box">
+                <div class="about__box" data-aos="fade-down">
                     <svg class="about__box-icon">
                         <use xlink:href="img/svg/sprite.svg#icon-award"></use>
                         <linearGradient id="about__svg-gradient" x2="1" y2="1">
@@ -66,7 +67,7 @@
                         alias, aliquid nisi!
                     </p>
                 </div>
-                <div class="about__box">
+                <div class="about__box" data-aos="fade-left">
                     <svg class="about__box-icon">
                         <use xlink:href="img/svg/sprite.svg#icon-bell"></use>
                     </svg>
@@ -76,7 +77,7 @@
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae deserunt esse molestias?
                     </p>
                 </div>
-                <div class="about__box">
+                <div class="about__box" data-aos="fade-right">
                     <svg class="about__box-icon">
                         <use xlink:href="img/svg/sprite.svg#icon-thumbs-up"></use>
                     </svg>
@@ -86,7 +87,7 @@
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam aliquam ex aut!
                     </p>
                 </div>
-                <div class="about__box">
+                <div class="about__box" data-aos="fade-up">
                     <svg class="about__box-icon">
                         <use xlink:href="img/svg/sprite.svg#icon-shopping-cart"></use>
                     </svg>
@@ -96,7 +97,7 @@
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat veritatis beatae enim illum.
                     </p>
                 </div>
-                <div class="about__box">
+                <div class="about__box" data-aos="fade-left">
                     <svg class="about__box-icon">
                         <use xlink:href="img/svg/sprite.svg#icon-smile"></use>
                     </svg>
@@ -107,44 +108,44 @@
                     </p>
                 </div>
         </section>
-        <section id="slider">
+        <section id="slider" >
             <h2 class="heading-large">Moje Naloty</h2>
             <div class="slider">
-                <div class="slider__container">
+                <div class="slider__container" >
+                    <div class="slider__screen" data-aos="flip-up"></div>
                     <button class="slider__btn slider__prevButton">&larr;</button>
                     <button class="slider__btn slider__nextButton">&rarr;</button>
                 </div>
-                <!-- <button class="call2a slider__call2a">Zobacz całą galerię</button> -->
             </div> 
         </section>
         <section class="works" id="uslugi">
             <h2 class="heading-large">Zakres Prac</h2>
             <div class="works__container">
                 <div class="works__samples">
-                    <img src="slider/DJI_7.jpg" class="works__samples-img" alt="mała plaża nad rzeką w lesie">
+                   
                 </div>
-                <ul class="works__list">
-                    <li class="works__list-item">
+                <ul class="works__list" data-aos="fade-left">
+                    <li class="works__list-item" tabindex="0">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Zdjęcia pod Wizualizacje 3d</span>
                     </li>
-                    <li class="works__list-item">
+                    <li class="works__list-item" tabindex="0">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Zdjęcia działek i nieruchomości</span>
                     </li>
-                    <li class="works__list-item">
+                    <li class="works__list-item" tabindex="0">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Zdjęcia pod Mapping 3d i ortofoto mapping</span>
                     </li>
-                    <li class="works__list-item">
+                    <li class="works__list-item" tabindex="0">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Zdjęcia ciągów komunikacyjnych</span>
                     </li>
-                    <li class="works__list-item">
+                    <li class="works__list-item" tabindex="0">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Imprezy okolicnościowe, eventy</span>
                     </li>
-                    <li class="works__list-item">
+                    <li class="works__list-item" tabindex="0">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Dozór i monitoring z powietrza</span>
                     </li>
@@ -154,7 +155,7 @@
         <section class="contact" id='formularz'>
             <h2 class="heading-large">Formularz kontaktowy</h2>
             <div class="contact__wrap">
-                <form action="#" class="form" autocomplete="off">
+                <form action="#" class="form" autocomplete="off" data-aos="zoom-out-right">
                     <div class="form__group">
                         <input type="text" class="form__input" id="name" placeholder="Imie">
                         <label for="name" class="form__label">Imie</label>
@@ -170,7 +171,7 @@
                     <textarea class="form__textarea"name="" cols="30" rows="10" required></textarea>
                     <button class="form__button">Wyślij !</button>
                 </form>
-                <div class="social-media">
+                <div class="social-media" data-aos="zoom-out-left">
                     <div class="social-media__window">
                         <a href="https://www.facebook.com/pages/category/Photography-Videography/Foto-DRON-%C5%81%C3%B3d%C5%BA-826975764326876/" class="social-media__link social-media__link-facebook">
                             <svg class="social-media__link-icon">
@@ -204,6 +205,12 @@
         </div>
         <p class="footer__copyrights">&copy <a class="footer__copyrights-mail" href="mailto:jaseveen@gmail.com">Seven</a> and the state of California</p>
     </footer>
-<script src="/js/slider.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./js/slider.js"></script>
+<script src="./js/main.js" type="module"></script>
+<script>
+    AOS.init();
+  </script>
 </body>
 </html>

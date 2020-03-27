@@ -44,19 +44,41 @@
     }
 }
 
-// -----=======ANIMATED SKY IS THE LIMIT=======-----
+// -----=======ANIMATED SLIDE=======-----
 
-@keyframes animated-heading-primary {
+@keyframes fadeIn {
     0% {
         opacity: 0;
+        transform: translateX(-200px);
     }
-    30% {
-        opacity: .3;
-    }
-    80% {
-        opacity: .8;
-    }
+
     100% {
         opacity: 1;
+        transform: translateX(0);
     }
 }
+
+// -----=======EXPAND WORKS SAMPLES=======-----
+
+@keyframes expandDiv {
+    0% {
+        display: none;
+        height: 0px;
+        width: 0px;
+        background: none;
+        box-shadow: none;
+        border: none;
+    }
+    100% {
+        display: block;
+        box-shadow: var(--bs-neumorphic-up);
+        height: 100%;
+        width: 80%;
+        border: 1px solid tomato;
+        padding: 2rem;
+        margin-left: 6rem;
+        transform-origin: center;
+    }
+}
+
+
