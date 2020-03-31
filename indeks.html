@@ -120,32 +120,46 @@
         </section>
         <section class="works" id="uslugi">
             <h2 class="heading-large">Zakres Prac</h2>
+            <div class="works__modal">
+                <div class="works__bigpicture">
+                    <button class="works__bigpicture-prev">
+                        <svg class="works__bigpicture-svg">
+                            <use href="/img/SVG/left-arrow-1.svg"></use>
+                        </svg>
+                    </button>
+                    <img src="" alt="gallery photo" class="works__bigpicture-pic">
+                    <button class="works__bigpicture-next">
+                        <svg class="works__bigpicture-svg">
+                            <use xlink:href="/img/SVG/right-arrow-1.svg"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
             <div class="works__container">
-                <div class="works__samples">
-                   
+                <div class="works__samples" id="target">
                 </div>
                 <ul class="works__list" data-aos="fade-left">
-                    <li class="works__list-item" tabindex="0">
+                    <li class="works__list-item" tabindex="0" data-id="0">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Zdjęcia pod Wizualizacje 3d</span>
                     </li>
-                    <li class="works__list-item" tabindex="0">
+                    <li class="works__list-item" tabindex="0" data-id="1">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Zdjęcia działek i nieruchomości</span>
                     </li>
-                    <li class="works__list-item" tabindex="0">
+                    <li class="works__list-item" tabindex="0" data-id="2">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Zdjęcia pod Mapping 3d i ortofoto mapping</span>
                     </li>
-                    <li class="works__list-item" tabindex="0">
+                    <li class="works__list-item" tabindex="0" data-id="3">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Zdjęcia ciągów komunikacyjnych</span>
                     </li>
-                    <li class="works__list-item" tabindex="0">
+                    <li class="works__list-item" tabindex="0" data-id="4">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Imprezy okolicnościowe, eventy</span>
                     </li>
-                    <li class="works__list-item" tabindex="0">
+                    <li class="works__list-item" tabindex="0" data-id="5">
                         <img src="img/quadrocopter-small.png" alt="image of a drone" class="works__list-item-img">
                         <span class='works__list-item-span'>Dozór i monitoring z powietrza</span>
                     </li>

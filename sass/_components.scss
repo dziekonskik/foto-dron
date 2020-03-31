@@ -16,7 +16,7 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
-		border: 2px solid white;
+		border: 1px solid white;
         transition: transform .2s ;
     }
 	&:after{
@@ -118,30 +118,10 @@
         left: 0;
     }
 }
-// -----=======ANIMATED SKY IS THE LIMIT=======---
-
-.active {
-    animation: 2s expandDiv linear forwards;
-}
-
-
-
-.imgSize {
-    display: inline-block;
-    box-shadow: -5px -5px 20px white,
-                 5px 5px 20px #BABECC;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    z-index: 4;
-
-}
+// -----=======CLASSES FOR WORKS SECTION IN JS=======---
 
 .open {
     box-shadow: var(--bs-neumorphic-up);
 }
 
-.hover {
-    box-shadow: var(--bs-neumorphic-up); 
-    transform: translateX(1rem);
-}
+
