@@ -164,34 +164,27 @@
             justify-content: center;
             align-items: center;
             position: absolute;
-            border: none;
-            color: white;
-            width: 60px;
-            height: 60px;
             background-color: transparent;
             transform: translateY(-50%);
         }
 
         &-prev {
             top: 50%;
-            left: -5%;
+            left: -7%;        
         }
 
         &-next {
             top: 50%;
-            right: -5%;
+            right: -7%;
         }
 
         &-svg {
-            display: block;
-            font-size: 3rem;
             position: absolute;
             z-index: 40;
-            border: none;
-            background-color: white;
-            width: 30px;
-            height: 30px;
-            opacity: 1;
+            fill: white;
+            width: 7rem;
+            height: 7rem;
+            stroke: 1;
         }
     }
 

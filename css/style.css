@@ -476,28 +476,21 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    border: none;
-    color: white;
-    width: 60px;
-    height: 60px;
     background-color: transparent;
     transform: translateY(-50%); }
   .works__bigpicture-prev {
     top: 50%;
-    left: -5%; }
+    left: -7%; }
   .works__bigpicture-next {
     top: 50%;
-    right: -5%; }
+    right: -7%; }
   .works__bigpicture-svg {
-    display: block;
-    font-size: 3rem;
     position: absolute;
     z-index: 40;
-    border: none;
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    opacity: 1; }
+    fill: white;
+    width: 7rem;
+    height: 7rem;
+    stroke: 1; }
 
 .contact {
   display: grid;

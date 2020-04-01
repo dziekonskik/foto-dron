@@ -1,6 +1,6 @@
-// -----=======WORKS SECTION ANIMATIONS =======-----
+// -----=======WORKS SECTION GALLERIES =======-----
 
-const container = document.querySelector('.works__container');
+
 const displayScreen = document.querySelector('.works__samples');
 const worksList = document.querySelectorAll('.works__list-item');
 const dataBase = [
@@ -34,6 +34,7 @@ function displayGallery(e) {
                 entry.forEach(url => {
                     const newPicture = document.createElement('img');
                     newPicture.setAttribute('src', url);
+                    newPicture.setAttribute('tabindex', '0')
                     newPicture.classList.add('works__samples-img');
                     displayScreen.appendChild(newPicture);
                 })
@@ -46,34 +47,74 @@ function displayGallery(e) {
     if (e.currentTarget.tagName === 'LI') {
         populateScreen();    
     }
+
+    //
+
     const pictures = Array.from(displayScreen.querySelectorAll('.works__samples-img'));
     const modal = document.querySelector('.works__modal');
-    const regex = new RegExp('\/s');
+    const prevButton = modal.querySelector('.works__bigpicture-prev');
+    const nextButton = modal.querySelector('.works__bigpicture-next');
+    let currentPicture;
+
 
     function openModal(e) {
         const photo = e.currentTarget;
         modal.classList.add('works__modal-open');
         displayPhoto(photo);
+        window.addEventListener('keyup', handleKeyUp);
+        prevButton.addEventListener('click', prevPicture);
+        nextButton.addEventListener('click', nextPicture);
+    }
+  
+    function closeModal() {
+        modal.classList.remove('works__modal-open');
     }
 
-    function closeModal(e) {
-        if (e.target === e.currentTarget) {
+    function displayPhoto(img) {
+        currentPicture = img
+        const regex = new RegExp('\/s');
+        const picture = modal.querySelector('.works__bigpicture-pic');
+        const biggerPicture = img.src.replace(regex, '/m')
+        picture.src = biggerPicture;       
+    }
+    
+    function prevPicture() {
+        displayPhoto(currentPicture.previousElementSibling || displayScreen.lastElementChild)
+    }
+
+    function nextPicture() {
+        displayPhoto(currentPicture.nextElementSibling || displayScreen.firstElementChild)
+    }
+    
+    function handleKeyUp(e) {
+        e.key === 'Enter' ? displayPhoto() : null;
+        e.key === 'Escape' ? closeModal() : null;
+        e.key === 'ArrowLeft' ? prevPicture() : null;
+        e.key === 'ArrowRight' ? nextPicture() : null;
+    }
+    
+    function clickOutside(e) {
+        if (e.target === e.currentTarget || e.key === 'Escape') {
             modal.classList.remove('works__modal-open');
         }
     }
 
-    function displayPhoto(img) {
-        const picture = modal.querySelector('.works__bigpicture-pic');
-        const biggerPicture = img.src.replace(regex, '/m')
-        picture.src = biggerPicture;
-    }
-
-    modal.addEventListener('click', closeModal)
+    modal.addEventListener('click', clickOutside);
     pictures.forEach(pic => {pic.addEventListener('click', openModal)});
+    pictures.forEach(pic => {pic.addEventListener('keyup', (e) => {
+        e.key === 'Enter' ? openModal(e) : null;
+    })});
 }
 
 
 worksList.forEach(item => {
     item.addEventListener('click', displayGallery);
+})
+worksList.forEach(item => {
+    item.addEventListener('keyup', (e) => {
+        if (e.currentTarget === item && e.key === 'Enter') {
+            displayGallery(e)
+        }
+    });
 })
 
