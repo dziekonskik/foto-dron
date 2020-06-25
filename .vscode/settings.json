@@ -1,3 +1,9 @@
 {
-    "liveServer.settings.port": 5501
+    "spellright.language": [
+        "pl"
+    ],
+    "spellright.documentTypes": [
+        "latex",
+        "plaintext"
+    ]
 }
