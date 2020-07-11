@@ -1,63 +1,9 @@
-// -----=======WORKS SECTION GALLERIES =======-----
+import '../scss/main.scss';
+import { dataBase } from './dataBase';
 
+// -----=======WORKS SECTION GALLERIES =======-----
 const displayScreen = document.querySelector('.works__samples');
 const worksList = document.querySelectorAll('.works__list-item');
-const dataBase = [
-  [
-    '../works/1/s/1.jpg',
-    '../works/1/s/2.jpg',
-    '../works/1/s/3.jpg',
-    '../works/1/s/4.jpg',
-    '../works/1/s/5.jpg',
-    '../works/1/s/6.jpg',
-    '../works/1/s/7.jpg',
-  ],
-  [
-    '../works/2/s/1.jpg',
-    '../works/2/s/2.jpg',
-    '../works/2/s/3.jpg',
-    '../works/2/s/4.jpg',
-    '../works/2/s/5.jpg',
-    '../works/2/s/6.jpg',
-    '../works/2/s/7.jpg',
-  ],
-  [
-    '../works/3/s/1.jpg',
-    '../works/3/s/2.jpg',
-    '../works/3/s/3.jpg',
-    '../works/3/s/4.jpg',
-    '../works/3/s/5.jpg',
-    '../works/3/s/6.jpg',
-    '../works/3/s/7.jpg',
-  ],
-  [
-    '../works/4/s/1.jpg',
-    '../works/4/s/2.jpg',
-    '../works/4/s/3.jpg',
-    '../works/4/s/4.jpg',
-    '../works/4/s/5.jpg',
-    '../works/4/s/6.jpg',
-    '../works/4/s/7.jpg',
-  ],
-  [
-    '../works/5/s/1.jpg',
-    '../works/5/s/2.jpg',
-    '../works/5/s/3.jpg',
-    '../works/5/s/4.jpg',
-    '../works/5/s/5.jpg',
-    '../works/5/s/6.jpg',
-    '../works/5/s/7.jpg',
-  ],
-  [
-    '../works/6/s/1.jpg',
-    '../works/6/s/2.jpg',
-    '../works/6/s/3.jpg',
-    '../works/6/s/4.jpg',
-    '../works/6/s/5.jpg',
-    '../works/6/s/6.jpg',
-    '../works/6/s/7.jpg',
-  ],
-];
 
 var tl = gsap.timeline();
 
@@ -83,6 +29,7 @@ function displayGallery(e) {
         entry.forEach((url) => {
           const newPicture = document.createElement('img');
           newPicture.setAttribute('src', url);
+          newPicture.setAttribute('alt', url);
           newPicture.setAttribute('tabindex', '0');
           newPicture.classList.add('works__samples-img');
           displayScreen.appendChild(newPicture);
