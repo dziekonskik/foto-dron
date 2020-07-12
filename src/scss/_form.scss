@@ -31,6 +31,10 @@
       margin: 4rem auto;
       width: 80%;
 
+      @include responsive(phone) {
+        width: 100%;
+      }
+
       &__group {
         margin: 1rem auto;
       }

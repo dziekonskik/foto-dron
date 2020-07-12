@@ -40,14 +40,16 @@
   }
 
   &__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    background-color: var(--color-background);
-    margin-right: 2rem;
+    @include responsive(phone) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      background-color: var(--color-background);
+      margin-right: 2rem;
+    }
   }
 
   &__hamburger {
@@ -58,7 +60,13 @@
       width: 4rem;
       height: 4rem;
       background-color: transparent;
+      padding: 1rem;
       cursor: pointer;
+
+      &:focus {
+        outline: none;
+        background-color: tomato;
+      }
 
       &-bar {
         width: 3.4rem;
