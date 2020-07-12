@@ -3,7 +3,6 @@
   background-size: cover;
   height: 90vh;
   clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
-  position: relative;
   font-weight: 100;
 
   @include responsive(phone) {
@@ -39,42 +38,61 @@
     border-radius: 2rem;
   }
 
-  &__wrapper {
+  &__hamburger-background {
     @include responsive(phone) {
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       width: 6rem;
       height: 6rem;
       border-radius: 50%;
-      background-color: var(--color-background);
       margin-right: 2rem;
+      background-image: radial-gradient(
+        circle at top right,
+        rgb(16, 188, 248) 0%,
+        rgb(16, 188, 248) 4%,
+        rgb(20, 212, 211) 4%,
+        rgb(20, 212, 211) 8%,
+        rgb(0, 192, 239) 8%,
+        rgb(0, 192, 239) 12%,
+        rgb(0, 167, 255) 12%,
+        rgb(0, 167, 255) 16%,
+        rgb(0, 130, 255) 16%,
+        rgb(0, 130, 255) 20%,
+        rgb(0, 121, 253) 20%,
+        rgb(0, 121, 253) 24%,
+        rgb(0, 112, 250) 24%,
+        rgb(0, 112, 250) 28%,
+        rgb(10, 102, 246) 28%,
+        rgb(10, 102, 246) 100%
+      );
+
+      position: fixed;
+      top: 2.2rem;
+      right: 2.2rem;
+
+      background-size: contain;
     }
   }
 
   &__hamburger {
     @include responsive(phone) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 4rem;
-      height: 4rem;
+      display: block;
       background-color: transparent;
-      padding: 1rem;
       cursor: pointer;
-
-      &:focus {
-        outline: none;
-        background-color: tomato;
-      }
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+      padding: 1.7rem;
 
       &-bar {
         width: 3.4rem;
         height: 0.4rem;
-        background-color: var(--color-primary);
+        background-color: var(--color-background);
         border-radius: 0.4rem;
         position: relative;
         transition: all 0.3s linear;
+        pointer-events: none;
 
         &::before,
         &::after {
@@ -82,8 +100,10 @@
           position: absolute;
           width: 3.4rem;
           height: 0.4rem;
-          background-color: var(--color-primary);
+          background-color: var(--color-background);
           border-radius: 0.4rem;
+          transition: all 0.3s linear;
+          pointer-events: none;
         }
         &::before {
           transform: translateY(-1.4rem);
@@ -95,7 +115,20 @@
     }
   }
 
-  &__main {
+  &__hamburger.active &__hamburger-bar {
+    transform: translateX(-50px);
+    background-color: transparent;
+  }
+
+  &__hamburger.active &__hamburger-bar::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+
+  &__hamburger.active &__hamburger-bar::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+  &__nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     list-style: none;
@@ -106,7 +139,7 @@
     }
   }
 
-  &__main-item {
+  &__nav-item {
     font-size: 1.2rem;
     text-transform: uppercase;
     position: relative;
@@ -116,7 +149,7 @@
     }
   }
 
-  &__main-link {
+  &__nav-link {
     display: block;
     text-decoration: none;
     color: white;
@@ -126,8 +159,8 @@
     position: relative;
   }
 
-  &__main-link::before,
-  &__main-link::after {
+  &__nav-link::before,
+  &__nav-link::after {
     content: '';
     position: absolute;
     display: block;
@@ -138,19 +171,19 @@
     transition: all 0.3s ease-in;
     transform: translateX(-1rem);
   }
-  &__main-link::before {
+  &__nav-link::before {
     left: 50%;
   }
-  &__main-link::after {
+  &__nav-link::after {
     right: 50%;
   }
-  &__main-link:hover::before,
-  &__main-link:hover::after {
+  &__nav-link:hover::before,
+  &__nav-link:hover::after {
     width: 20%;
   }
 
-  &__main-link:active,
-  &__main-link:focus {
+  &__nav-link:active,
+  &__nav-link:focus {
     outline: none;
     transform: translateY(-1px);
     box-shadow: var(--box-shadow-active);
@@ -187,17 +220,4 @@
     widows: 30rem;
     height: 30rem;
   }
-}
-
-.header__hamburger.open .header__hamburger-bar {
-  transform: translateX(-50px);
-  background-color: transparent;
-}
-
-.header__hamburger.open .header__hamburger-bar::before {
-  transform: rotate(45deg) translate(35px, -35px);
-}
-
-.header__hamburger.open .header__hamburger-bar::after {
-  transform: rotate(-45deg) translate(35px, 35px);
 }

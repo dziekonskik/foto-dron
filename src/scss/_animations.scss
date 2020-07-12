@@ -1,84 +1,108 @@
 // -----=======ANIMATED MENU CONTACT BUTTON=======-----
 
 @keyframes btn-animated-top {
-    0% {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-    }
-    100% {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes btn-animated-left {
-    0% {
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-    }
-    100% {
-        -webkit-transform: translateY(100%);
-        transform: translateY(100%);
-    }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 
 @keyframes btn-animated-bottom {
-    0% {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-    }
-    100% {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-    }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes btn-animated-right {
-    0% {
-        -webkit-transform: translateY(100%);
-        transform: translateY(100%);
-    }
-    100% {
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-    }
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 // -----=======ANIMATED SLIDE=======-----
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-200px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 // -----=======EXPAND WORKS SAMPLES=======-----
 
 @keyframes expandDiv {
-    0% {
-        display: none;
-        height: 0px;
-        width: 0px;
-        background: none;
-        box-shadow: none;
-        border: none;
-    }
-    100% {
-        display: block;
-        box-shadow: var(--bs-neumorphic-up);
-        height: 100%;
-        width: 80%;
-        border: 1px solid tomato;
-        padding: 2rem;
-        margin-left: 6rem;
-        transform-origin: center;
-    }
+  0% {
+    display: none;
+    height: 0px;
+    width: 0px;
+    background: none;
+    box-shadow: none;
+    border: none;
+  }
+  100% {
+    display: block;
+    box-shadow: var(--bs-neumorphic-up);
+    height: 100%;
+    width: 80%;
+    border: 1px solid tomato;
+    padding: 2rem;
+    margin-left: 6rem;
+    transform-origin: center;
+  }
 }
 
+// -----=======HERO BTNS ON MOBILE MENU ACTIVE=======-----
 
+@keyframes go-left {
+  0% {
+    transform: translateX(0);
+  }
+  14% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(-400rem);
+  }
+}
+
+@keyframes go-right {
+  0% {
+    transform: translateX(0);
+  }
+  14% {
+    transform: translateX(7rem);
+  }
+  100% {
+    transform: translateX(-400rem);
+  }
+}
+
+.animate-left {
+  animation: 1s go-left linear forwards;
+}
+
+.animate-right {
+  animation: 1s go-right 0.4s linear forwards;
+}

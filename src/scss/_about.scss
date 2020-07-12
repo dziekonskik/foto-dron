@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
   padding: 4rem;
   margin: 4rem 0;
+  position: relative;
 
   @include responsive(phone) {
     padding: 0;
