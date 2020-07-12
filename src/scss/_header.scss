@@ -25,7 +25,7 @@
     display: inline-block;
     color: white;
     position: relative;
-    transition: all 0.4s;
+    transition: var(--transition);
 
     @include responsive(phone) {
       font-size: 2rem;
@@ -38,43 +38,6 @@
     border-radius: 2rem;
   }
 
-  &__hamburger-background {
-    @include responsive(phone) {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 6rem;
-      height: 6rem;
-      border-radius: 50%;
-      margin-right: 2rem;
-      background-image: radial-gradient(
-        circle at top right,
-        rgb(16, 188, 248) 0%,
-        rgb(16, 188, 248) 4%,
-        rgb(20, 212, 211) 4%,
-        rgb(20, 212, 211) 8%,
-        rgb(0, 192, 239) 8%,
-        rgb(0, 192, 239) 12%,
-        rgb(0, 167, 255) 12%,
-        rgb(0, 167, 255) 16%,
-        rgb(0, 130, 255) 16%,
-        rgb(0, 130, 255) 20%,
-        rgb(0, 121, 253) 20%,
-        rgb(0, 121, 253) 24%,
-        rgb(0, 112, 250) 24%,
-        rgb(0, 112, 250) 28%,
-        rgb(10, 102, 246) 28%,
-        rgb(10, 102, 246) 100%
-      );
-
-      position: fixed;
-      top: 2.2rem;
-      right: 2.2rem;
-
-      background-size: contain;
-    }
-  }
-
   &__hamburger {
     @include responsive(phone) {
       display: block;
@@ -84,6 +47,11 @@
       top: 3rem;
       right: 3rem;
       padding: 1.7rem;
+      transition: var(--transition);
+
+      &:hover {
+        transform: scale(1.03);
+      }
 
       &-bar {
         width: 3.4rem;
@@ -91,7 +59,7 @@
         background-color: var(--color-background);
         border-radius: 0.4rem;
         position: relative;
-        transition: all 0.3s linear;
+        transition: var(--transition);
         pointer-events: none;
 
         &::before,
@@ -102,7 +70,7 @@
           height: 0.4rem;
           background-color: var(--color-background);
           border-radius: 0.4rem;
-          transition: all 0.3s linear;
+          transition: var(--transition);
           pointer-events: none;
         }
         &::before {
@@ -139,6 +107,19 @@
     }
   }
 
+  &__hamburger.active + &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 70vh;
+    transform: translateX(-50%);
+    pointer-events: all;
+  }
+
   &__nav-item {
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -157,6 +138,12 @@
     cursor: pointer;
     transition: all 0.2s ease-in;
     position: relative;
+
+    @include responsive(phone) {
+      padding: 3rem 4rem;
+      font-size: 2rem;
+      font-weight: 900;
+    }
   }
 
   &__nav-link::before,
@@ -170,6 +157,10 @@
     background-color: white;
     transition: all 0.3s ease-in;
     transform: translateX(-1rem);
+
+    @include responsive(phone) {
+      transform: translateX(0);
+    }
   }
   &__nav-link::before {
     left: 50%;
