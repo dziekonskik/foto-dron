@@ -41,13 +41,14 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateX(-200px);
   }
-
   100% {
     opacity: 1;
-    transform: translateX(0);
   }
+}
+
+.show-menu {
+  animation: 0.7s fadeIn 0.7s linear forwards;
 }
 
 // -----=======EXPAND WORKS SAMPLES=======-----

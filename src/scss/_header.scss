@@ -113,11 +113,14 @@
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    top: 20%;
+    top: 13%;
     left: 50%;
     height: 70vh;
     transform: translateX(-50%);
     pointer-events: all;
+    opacity: 0;
+    border: 1px solid white;
+    border-radius: 0.7rem;
   }
 
   &__nav-item {
@@ -143,6 +146,7 @@
       padding: 3rem 4rem;
       font-size: 2rem;
       font-weight: 900;
+      letter-spacing: 0.4rem;
     }
   }
 
@@ -192,6 +196,14 @@
 
     @include responsive(phone) {
       display: none;
+    }
+
+    @include responsive(tablet-portrait) {
+      display: none;
+    }
+
+    @include responsive(tablet-landscape) {
+      font-size: 7rem;
     }
   }
 

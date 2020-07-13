@@ -1,16 +1,20 @@
 .call2a {
-  padding: 3rem 4rem;
+  padding: 4rem 5rem;
   background: none;
   color: white;
   border: 1px solid white;
   position: absolute;
   text-transform: uppercase;
-
   font-weight: bold;
   letter-spacing: 3px;
   cursor: pointer;
   transition: all 0.4s linear;
   overflow: hidden;
+  border-radius: 0.7rem;
+
+  @include responsive(phone) {
+    padding: 3rem 4rem;
+  }
 
   &:hover {
     font-weight: 900;
