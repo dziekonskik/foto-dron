@@ -21,6 +21,10 @@
     background-position: center center;
     margin: 3rem auto;
     border-radius: 1rem;
+
+    @include responsive(phone) {
+      height: 40rem;
+    }
   }
 
   &__btn {

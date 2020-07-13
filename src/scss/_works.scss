@@ -5,17 +5,20 @@
     grid-template-columns: 2fr 1fr;
     position: relative;
   }
+
   &__list {
     display: grid;
+    grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
     perspective: 100rem;
     transform: translateX(-10rem);
 
     @include responsive(phone) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       perspective: none;
       transform: translateX(0);
-      display: block;
       width: 100%;
     }
 
@@ -38,10 +41,19 @@
       mix-blend-mode: hue;
       z-index: 3;
 
+      @include responsive(phone) {
+        grid-template-columns: 1fr;
+        position: static;
+      }
+
       &-img {
         width: 50%;
         opacity: 0.7;
         justify-self: end;
+
+        @include responsive(phone) {
+          display: none;
+        }
       }
 
       &-span {
@@ -52,17 +64,26 @@
       }
     }
 
-    &-item:hover {
-      transform: rotateY(-10deg) rotateX(-7deg) scale(1.07);
-      mix-blend-mode: normal;
-      opacity: 0.9;
-      border-radius: 1rem;
-      font-size: 1.7rem;
+    // @include responsive(phone) {
+    //   &-item::nth-child(n + 2) {
+    //     grid-area: 2 / -1;
+    //   }
+    // }
 
-      &-img {
-        width: 60%;
+    @include responsive(small-desktop) {
+      &-item:hover {
+        transform: rotateY(-10deg) rotateX(-7deg) scale(1.07);
+        mix-blend-mode: normal;
+        opacity: 0.9;
+        border-radius: 1rem;
+        font-size: 1.7rem;
+
+        &-img {
+          width: 60%;
+        }
       }
     }
+
     &-item:focus,
     &-item:active {
       transform: translateX(-7rem);

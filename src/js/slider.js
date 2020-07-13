@@ -37,8 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
   prevButton.addEventListener('click', handlePrevButton);
   nextButton.addEventListener('click', handleNextButton);
 
-  const form = document.forms[0];
-  console.log(form);
   function obczaj(e) {
     console.log(e.touches);
   }
