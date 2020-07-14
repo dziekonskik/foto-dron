@@ -12,7 +12,7 @@ function displayGallery(e) {
   tl.fromTo(
     '.works__samples',
     { x: '50%', y: '50%', height: 0, width: 0, transformOrigin: '50% 50%' },
-    { x: 20, y: 20, height: '70vh', width: '100%', duration: 3, ease: 'slow' }
+    { x: 20, y: 20, height: '70vh', width: '80%', duration: 3, ease: 'slow' }
   );
 
   function close() {

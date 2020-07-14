@@ -4,6 +4,10 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     position: relative;
+
+    @include responsive(phone) {
+      grid-template-rows: repeat(2, 1fr);
+    }
   }
 
   &__list {
@@ -19,7 +23,7 @@
       grid-template-columns: repeat(2, 1fr);
       perspective: none;
       transform: translateX(0);
-      width: 100%;
+      width: 90%;
     }
 
     &-item {
@@ -27,6 +31,7 @@
       grid-template-columns: 2fr 5fr;
       font-size: 1.4rem;
       text-transform: uppercase;
+      text-align: center;
       color: var(--color-background);
       font-family: inherit;
       padding: 2rem 1rem;
@@ -44,6 +49,11 @@
       @include responsive(phone) {
         grid-template-columns: 1fr;
         position: static;
+        transform: rotateY(0) rotateX(0);
+        border-bottom: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.3rem;
       }
 
       &-img {
@@ -64,12 +74,6 @@
       }
     }
 
-    // @include responsive(phone) {
-    //   &-item::nth-child(n + 2) {
-    //     grid-area: 2 / -1;
-    //   }
-    // }
-
     @include responsive(small-desktop) {
       &-item:hover {
         transform: rotateY(-10deg) rotateX(-7deg) scale(1.07);
@@ -87,6 +91,11 @@
     &-item:focus,
     &-item:active {
       transform: translateX(-7rem);
+
+      @include responsive(phone) {
+        transform: scale(1.1);
+        box-shadow: var(--box-shadow);
+      }
     }
 
     &-item:nth-child(1) {
@@ -131,9 +140,12 @@
     overflow: auto;
     position: relative;
     z-index: 17;
+    grid-row-start: 2;
+    grid-row-end: -1;
 
     @include responsive(phone) {
-      display: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
 
     &-img {
@@ -144,6 +156,7 @@
       width: 100%;
       object-fit: cover;
       transition: all 0.3s linear;
+      border-radius: 1rem;
 
       &:hover {
         box-shadow: var(--bs-neumorphic-up);
