@@ -7,6 +7,8 @@
 
     @include responsive(phone) {
       grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: 1fr;
+      justify-content: center;
     }
   }
 
@@ -24,6 +26,7 @@
       perspective: none;
       transform: translateX(0);
       width: 90%;
+      margin: 4rem 0;
     }
 
     &-item {
