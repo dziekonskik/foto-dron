@@ -136,6 +136,16 @@
         display: grid;
         justify-content: center;
         align-content: center;
+
+        @include responsive(phone) {
+          display: flex;
+          height: 10rem;
+          width: 30rem;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 6rem;
+          box-shadow: var(--box-shadow);
+        }
       }
 
       &__link {
