@@ -7,7 +7,8 @@
 
   @include responsive(phone) {
     padding: 0;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+    gap: 4rem;
   }
 
   &__box {
@@ -20,6 +21,10 @@
     box-shadow: var(--bs-neumorphic-up);
     margin: 3rem 2rem;
     text-align: center;
+
+    @include responsive(phone) {
+      height: 100%;
+    }
 
     &-icon {
       width: 6rem;
@@ -40,6 +45,10 @@
       padding: 1rem 2rem;
       color: var(--color-grey-dark);
       height: 13rem;
+
+      @include responsive(phone) {
+        height: 16rem;
+      }
     }
   }
 }
