@@ -19,8 +19,6 @@
     border-radius: 3rem;
     box-shadow: var(--bs-neumorphic-up);
     margin: 3rem 2rem;
-    min-height: 25rem;
-    min-width: 25rem;
     text-align: center;
 
     &-icon {
@@ -28,23 +26,20 @@
       height: 6rem;
       fill: url(#about__svg-gradient) var(--color-primary);
       margin: 2rem auto;
-      // position: absolute;
-      // transform: rotate(45deg) scale(2) translateX(3rem);
-      // opacity: .3;
-      // z-index: -4;
     }
 
     &-heading-small {
       font-size: 1.75rem;
       text-transform: uppercase;
       margin-bottom: 1rem;
-      color: var(--color-grey-dark);
+      color: var(--color-background);
     }
 
     &-text {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       padding: 1rem 2rem;
-      color: var(--color-grey-light);
+      color: var(--color-grey-dark);
+      height: 13rem;
     }
   }
 }
