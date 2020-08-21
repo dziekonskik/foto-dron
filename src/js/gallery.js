@@ -29,7 +29,7 @@ function displayGallery(e) {
         entry.forEach((url) => {
           const newPicture = document.createElement('img');
           newPicture.setAttribute('src', url);
-          newPicture.setAttribute('alt', url);
+          newPicture.setAttribute('alt', 'zdjęcie z drona');
           newPicture.setAttribute('tabindex', '0');
           newPicture.classList.add('works__samples-img');
           displayScreen.appendChild(newPicture);
@@ -63,6 +63,7 @@ function displayGallery(e) {
 
   function openModal(e) {
     const photo = e.currentTarget;
+    console.log(photo);
     modal.classList.add('works__modal-open');
     displayPhoto(photo);
     window.addEventListener('keyup', handleKeyUp);
